@@ -12,6 +12,7 @@ namespace JewelCollector
         public void Use(Robot robot)
         {
             robot.CollectItem(this);
+            robot.Item(points); //alteração feita por AugustoCamargo1
         }
     }
 }
