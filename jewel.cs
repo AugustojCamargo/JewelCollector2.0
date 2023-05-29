@@ -4,10 +4,11 @@ namespace JewelCollector
     {
         public int Points { get; }
 
-        public Jewel(string symbol, int points) : base(symbol)
+        public Jewel(string symbol, int points, JewelType type) : base(symbol) 
         {
             Points = points;
-        }
+            Type = type;
+        } //Alteração feita por AugustoCamargo1
 
         public void Use(Robot robot)
         {
@@ -16,3 +17,10 @@ namespace JewelCollector
         }
     }
 }
+
+    enum JewelType //Alteração feita por AugustoCamargo1
+    {
+        Red,
+        Green,
+        Blue
+    }
