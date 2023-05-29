@@ -1,6 +1,6 @@
 namespace JewelCollector
 {
-    class Jewel : Item, IUsable
+    class Jewel : Item, IUsable //alteração feita por AugustoCamargo2
     {
         public int Points { get; }
 
@@ -13,6 +13,11 @@ namespace JewelCollector
         {
             robot.CollectItem(this);
             robot.Item(points); //alteração feita por AugustoCamargo1
+        }
+
+        public override string ToString()
+        {
+            return $"J{Points}"; //Alteração feita por AugustoCamargo2
         }
     }
 }
