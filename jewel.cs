@@ -6,19 +6,20 @@ namespace JewelCollector
         public JewelType Type { get; }
         public bool IsCollected { get; private set; }
 
-        public Jewel(string symbol, int points) : base(symbol)
+        public Jewel(string symbol, int points, JewelType type) : base(symbol) 
         {
             Points = points;
             Type = type;
             IsCollected = false;
         }
+        } //Alteração feita por AugustoCamargo1
 
         public void Use(Robot robot)
         {
             if(!IsCollected)
             {
                 robot.CollectItem(this);
-                IsCollected = true; //alteração feita por AugustoCamargo1
+                IsCollected = true;
             }
             else
             {
@@ -31,7 +32,7 @@ namespace JewelCollector
             string status = IsCollected ? "Coletado" : "Disponivel";
             return $"Jewel: Type ={Type}, Points = {Points}, Status ={status}"; //Alteração feita por AugustoCamargo2
         }
-    } //Alteração feita por AugustoCamargo2
+     //Alteração feita por AugustoCamargo2
     enum JewelType
     {
         Red,
